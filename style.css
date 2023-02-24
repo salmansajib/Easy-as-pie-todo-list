@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(120deg, #e2c35d, #d88771);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header h1 {
+  font-weight: 400;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+form button {
+  color: #d88771;
+  background: white;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+form button:hover {
+  background: #d88771;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo {
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 500ms ease;
+}
+
+.todo-item {
+  flex: 1;
+  padding: 0rem 0.5rem;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #f7704a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: rgb(80, 231, 80);
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.select {
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  background: #ff6f47;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 30ms ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #ff6f47;
+}
